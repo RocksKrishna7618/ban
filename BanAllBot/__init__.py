@@ -16,14 +16,14 @@ LOG = logging.getLogger(__name__)
 ENV = bool(os.environ.get("ENV",False))
 
 if ENV:
-    API_ID=int(os.environ.get("API_ID","28422427"))
-    API_HASH=str(os.environ.get("API_HASH","9d83e9bc46cab0c6793faebbd324d4e3"))
-    TOKEN=str(os.environ.get("TOKEN","5867205386:AAE-fbedTagRGqHcmaJ7a1Cm9seeQTp-mo8"))
-    SUDO = list(int(i) for i in os.environ.get("SUDO", "5314932005").split(" "))
-    START_IMG=str(os.environ.get("START_IMG","https://te.legra.ph/file/4dfa9b6a0305653017978.jpg"))
-    BOT_ID=int(os.environ.get("BOT_ID","5867205386"))
-    BOT_USERNAME=str(os.environ.get("BOT_USERNAME","BanAllRobot"))
-    BOT_NAME=str(os.environ.get("BOT_NAME","ʀᴏᴄᴋs ꭙ ʙᴀɴᴀʟʟ"))
+    API_ID=int(os.environ.get("API_ID",""))
+    API_HASH=str(os.environ.get("API_HASH",""))
+    TOKEN=str(os.environ.get("TOKEN",""))
+    SUDO = list(int(i) for i in os.environ.get("SUDO", "5264285143").split(" "))
+    START_IMG=str(os.environ.get("START_IMG",""))
+    BOT_ID=int(os.environ.get("BOT_ID",""))
+    BOT_USERNAME=str(os.environ.get("BOT_USERNAME",""))
+    BOT_NAME=str(os.environ.get("BOT_NAME",""))
 
 else:
     API_ID=Config.API_ID
