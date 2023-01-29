@@ -14,7 +14,7 @@ START_BUTTONS=InlineKeyboardMarkup (
       [
          InlineKeyboardButton (text="☆ ᴏᴡɴᴇʀ ☆",url=f"https://t.me/itz_rocks_krishna"
      ),
-         InlineKeyboardButton (text=☆ ʜᴇʟᴘ ☆",callback_data="help_back")
+         InlineKeyboardButton (text="☆ ʜᴇʟᴘ ☆",callback_data="help_back")
       ],
       [
           InlineKeyboardButton (text="☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆",url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
