@@ -16,7 +16,7 @@
 $ sudo apt upgrade
 $ sudo apt install python3-pip
 $ git clone https://github.com/RocksKrishnaBot/BanAllBot
-$ cd <ʀᴇᴘᴏ ɴᴀᴍᴇ>
+$ cd BanAllBot
 $ pip3 install -U -r requirements.txt
 $ python3 -m BanAllBot
 ```
