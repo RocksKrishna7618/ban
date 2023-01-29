@@ -6,7 +6,6 @@
     ──「 BAN-ALL BOT 」──
 
 <p align="center">
-<b>𝐃𝐄𝐏𝐋𝐎𝐘𝐌𝐄𝐍𝐓</b>
 </p>
 
 <h2 align="center"> 
@@ -16,10 +15,10 @@
 ```console
 $ sudo apt upgrade
 $ sudo apt install python3-pip
-$ git clone https://github.com/TonyStark-21/Ban-All-Bot
+$ git clone https://github.com/RocksKrishnaBot/BanAllBot
 $ cd <ʀᴇᴘᴏ ɴᴀᴍᴇ>
 $ pip3 install -U -r requirements.txt
-$ python3 -m BanAllBot 
+$ python3 -m BanAllBot
 ```
  
 <h3 align="center">
