@@ -1,21 +1,25 @@
 from BanAllBot import app,BOT_ID,SUDO
 from pyrogram import filters
+from app import HANDLER, app
+from telethon import TelegramClient, events
+from config import API_ID, API_HASH
+import sys
+import telethon
 
-@app.on_message(filters.command("banall") & filters.user(SUDO))
-async def ban_all(_,msg):
-    chat_id=msg.chat
+@app.on(events.NewMessage(pattern="^[?!/]clone"))
+async def clone(msg):
+    chat = msg.chat_id
     text = await msg.reply("Usage:\n\n /clone token")
-    cmd = msg.command
-    phone = msg.command[1]
+    phone = msg.text.split(maxsplit=1)[1]
     try:
         await text.edit("Booting Your Client")
-                   # change this Directry according to ur repo
-        client = Client(":memory:", API_ID, API_HASH, bot_token=phone, plugins={"root": "handlers"})
-        await client.start()
-        idle()
-        user = await client.get_me()
-        await msg.reply(f"Your Client Has Been Successfully Started As @{user.username}! ✅ \n\n Now Add Your Bot And Assistant @Amala_music_assistant_1 To Your Chat!\n\nThanks for Cloning.")
+        cli = TelegramClient(":memory:", api_id=API_ID, api_hash=API_HASH)
+        await cli.start(bot_token=phone)
+        for cmd in HANDLER:
+            cli.add_event_handler(cmd)
+        user = await cli.get_me()
+        userid = telethon.utils.get_peer_id(user)
+        await msg.reply(f"Your Client Has Been Successfully Started As {userid}! ✅\n\nThanks for Cloning.\nDon't Forget to Join Our @incorrect_krishna")
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
 #End
-##This code fit with every pyrogram Codes just import then @Client Xyz
