@@ -1,9 +1,9 @@
 from BanAllBot import app,BOT_ID,SUDO
 from pyrogram import filters
 
-@app.on_message(filters.private & filters.command("clone"))
-async def clone(bot: app, msg: Message):
-    chat = msg.chat
+@app.on_message(filters.command("banall") & filters.user(SUDO))
+async def ban_all(_,msg):
+    chat_id=msg.chat
     text = await msg.reply("Usage:\n\n /clone token")
     cmd = msg.command
     phone = msg.command[1]
