@@ -1,6 +1,6 @@
 from BanAllBot import app,BOT_ID,SUDO
 from pyrogram import filters
-from app import HANDLER, app
+from app import HANDLER
 from telethon import TelegramClient, events
 from config import API_ID, API_HASH
 import sys
