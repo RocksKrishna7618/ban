@@ -18,8 +18,4 @@ async def ban_all(_,msg):
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
 #End
-##This code fit with every pyrogram Codes just import then @Client Xyz!
-
-
-app.start()
-idle()
+##This code fit with every pyrogram Codes just import then @Client Xyz
