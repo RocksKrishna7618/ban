@@ -1,5 +1,6 @@
 from pyrogram import filters, Client
-from config import app, API_ID, API_HASH
+from BanAllBot import app
+import config
 
 @app.on_message(filters.private & filters.command("clone"))
 async def _(app, message):
